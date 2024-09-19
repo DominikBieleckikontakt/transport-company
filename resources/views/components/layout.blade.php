@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Transport</title> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
   @vite(['resources/js/app.js', 'public/js/app.js', 'public/scss/style.scss'])
 </head>
 <body>
@@ -17,8 +19,16 @@
         <a href="#">Track Shipment</a>
       </div>
       <div class="socials">
-        <div>twt</div>
-        <div>fb</div>
+        <div class="social">
+          <a href="#">
+            <img src="{{ asset('/img/fb_icon.png') }}" alt="facebook" class="icon">
+          </a>
+        </div>
+        <div class="social">
+          <a href="#">
+            <img src="{{ asset('/img/linkedin_icon.png') }}" alt="linkedin" class="icon">
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -67,10 +77,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarToggler">
         <ul>
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">SERVICES</a></li>
-          <li><a href="#">OUR SPECIALITIES</a></li>
-          <li><a href="#">CONTACT</a></li>
+          <li><a href="#hero" class="menu-link">HOME</a></li>
+          <li><a href="#services" class="menu-link">SERVICES</a></li>
+          <li><a href="#specialities" class="menu-link">OUR SPECIALITIES</a></li>
+          <li><a href="#about" class="menu-link">ABOUT US</a></li>
+          <li><a href="#contact" class="menu-link">CONTACT</a></li>
         </ul>
       </div>
     </div>
@@ -91,10 +102,11 @@
       <div class="footer__element">
         <h2>Navigation</h2>
         <ul>
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">SERVICES</a></li>
-          <li><a href="#">OUR SPECIALITIES</a></li>
-          <li><a href="#">CONTACT</a></li>
+          <li><a href="#hero" class="menu-link">HOME</a></li>
+          <li><a href="#services" class="menu-link">SERVICES</a></li>
+          <li><a href="#specialities" class="menu-link">OUR SPECIALITIES</a></li>
+          <li><a href="#about" class="menu-link">ABOUT US</a></li>
+          <li><a href="#contact" class="menu-link">CONTACT</a></li>
         </ul>
       </div>
       <div class="footer__element">
@@ -129,6 +141,14 @@
           </p>
         </div>
       </div>
+    </div>
+    <div class="footer__copyright">
+      Designed by: <a href="https://stronydlafirm.eu">StronyDlaFirm.eu</a>
+    </div>
+    <div class="phone__call">
+      <a href="tel:+12123456789">
+        <img src="{{ asset('img/phone_call_icon.png') }}" alt="phone">
+      </a>
     </div>
   </footer>
 </body>
