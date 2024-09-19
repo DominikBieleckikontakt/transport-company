@@ -35,9 +35,7 @@ section:nth-child(even) {
 
 .line {
   max-width: 210px;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  margin-inline: auto;
+  margin: 2rem auto 1rem auto;
   display: flex;
   gap: .3rem;
 
@@ -126,9 +124,8 @@ section:nth-child(even) {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 1rem;
-
-
+      margin: auto 0;
+      
       img {
         width: 125px;
       }
@@ -227,7 +224,6 @@ nav {
 
   ul {
     margin-top: 1rem;
-    margin: 0;
     list-style-type: none;
 
     li {
@@ -259,6 +255,128 @@ nav {
   }
 }
 
+.hero {
+  .swiper-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .swiper-slide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      z-index: 0;
+    }
+  }
+  
+  .banner-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    transform: translateY(-50%);
+    text-align: left;
+    color: white;
+    max-width: 600px;
+    z-index: 10;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+    }
+  }
+  
+  .banner-button {
+    padding: 15px 30px;
+    background-color: $primary;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $primary-hover;
+    }
+  }
+  
+  .swiper-pagination {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  
+  .swiper-pagination-bullet {
+    background-color: $smokey;
+    opacity: 1;
+    z-index: 10;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: $primary;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: $smokey;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    z-index: 10;
+    opacity: 1;
+    display: none;
+  }
+
+  @media (min-width: 600px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: block;
+    }
+  }
+  
+  .swiper-button-next {
+    right: 20px;
+  }
+  
+  .swiper-button-prev {
+    left: 20px;
+  }
+  
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 24px;
+  }
+}
+
 .section__container {
   margin-inline: 3rem;
   padding: 6rem 0;
@@ -279,7 +397,6 @@ nav {
 }
 
 .whyus__section {
-
   .text__container {
     margin-bottom: 3rem;
 
@@ -301,8 +418,8 @@ nav {
     row-gap: 3rem;
 
     .card {
-      border: none;
       position: relative;
+      border: none;
       z-index: 1;
       transition: background-color 0.5s ease;
       padding: 3rem;
@@ -348,25 +465,9 @@ nav {
         transform: scaleY(0);
         transform-origin: bottom center;
         background: $accent;
-        // color: white;
         z-index: -1;
         transition: transform 0.5s;
-
-        // .image__container {
-        //   border: 3px solid white;
-        // }
       }
-
-      // &:hover {
-      //   h2, p {
-      //     color: white;
-      //   }
-
-      //   .image__container {
-      //     border: 3px solid white;
-      //   }
-
-      // }
 
       &:hover::after {
         transform: scaleY(1);
@@ -381,7 +482,6 @@ nav {
 
     @media (min-width: 1000px) {
       grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
     }
 
   }
@@ -389,7 +489,7 @@ nav {
 
 .bestat__section {
   .text__container {
-    margin-bottom: 3rem;
+    margin: 0 0 3rem 0;
     text-align: center;
 
     h3 {
@@ -467,7 +567,7 @@ nav {
 
   @media (min-width: 1000px) {
       .grid-container {
-          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-columns: repeat(3, 1fr);
           align-items: start;
 
           .icon img {
@@ -478,8 +578,46 @@ nav {
   }
 }
 
-.contact__section {
+.aboutus__section {
+  .text__container {
+    margin-bottom: 3rem;
 
+    h2 {
+      margin: 0;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+  
+    p {
+      text-align: center;
+      color: #999999;
+    }
+  }
+
+  .aboutus__section-container {
+    padding: 6rem 0;
+    margin-inline: 3rem;
+    
+    @media (min-width: 800px) {
+      width: 700px;
+      margin-inline: auto;
+    }
+
+    @media (min-width: 1000px) {
+      width: 900px;
+    }
+
+    .about__text {
+      p {
+        font-size: 1.1rem;
+        text-wrap: pretty;
+      }
+    }
+  }
+}
+
+.contact__section {
   .contact__section-container {
     padding: 6rem 0;
     margin-inline: 3rem;
@@ -523,10 +661,10 @@ nav {
         border: none;
         outline: none;
         transition-duration: $transition-duration;
-      }
 
-      button:hover {
-        background-color: $primary-hover;
+        &:hover {
+          background-color: $primary-hover;
+        }
       }
 
       @media (min-width: 800px) {
@@ -553,10 +691,14 @@ nav {
           border-radius: 12px;
           outline: 0;
           border: 1px solid #999999;
-        }
-  
-        input:active, input:focus {
-          border: 1px solid $primary;
+
+          &:not(:placeholder-shown):invalid {
+            border: 1px solid red;
+          }
+
+          &:active, &:focus {
+            border: 1px solid $primary;
+          }
         }
       }
   
@@ -569,10 +711,14 @@ nav {
           border-radius: 12px;
           outline: 0;
           border: 1px solid #999999;
-        }
-  
-        textarea:active, textarea:focus {
-          border: 1px solid $primary;
+
+          &:not(:placeholder-shown):invalid {
+            border: 1px solid red;
+          }
+
+          &:active, &:focus {
+            border: 1px solid $primary;
+          }
         }
       }
   
@@ -583,10 +729,8 @@ nav {
           grid-column: span 2;
         }
       }
-  
     }
   }
-
 }
 
 footer {
@@ -595,9 +739,9 @@ footer {
 
   .footer__container {
     display: grid;
+    row-gap: 2rem;
     
     padding: 3rem;
-    padding-inline: 3rem;
 
     h2 {
       font-size: 1.2rem;
@@ -610,7 +754,6 @@ footer {
 
     @media (min-width: 1000px) {
       grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
     }
 
     .footer__logo {
@@ -619,9 +762,10 @@ footer {
       .image__container {
         display: flex;
         justify-content: center;
+        margin: 0 0 1rem 0;
 
         img {
-          width: 200px;
+          width: 150px;
         }
       
       }
@@ -724,169 +868,4 @@ footer {
     }
   }
 
-}
-
-.hero {
-  .swiper-container {
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-  }
-  
-  .swiper-slide {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .swiper-slide::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
-    z-index: 1; /* Ensure it sits above the image but below the text */
-  }
-
-  .swiper-slide img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    z-index: 0;
-  }
-  
-  .banner-content {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    right: 10%;
-    transform: translateY(-50%);
-    text-align: left;
-    color: white;
-    max-width: 600px;
-    z-index: 10;
-  }
-  
-  .banner-content h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-  }
-  
-  .banner-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
-  }
-  
-  .banner-button {
-    padding: 15px 30px;
-    background-color: $primary;
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .banner-button:hover {
-    background-color: $primary-hover;
-  }
-  
-  /* Swiper Pagination Dots */
-  .swiper-pagination {
-    position: absolute;
-    bottom: 20px; /* Adjust this value to move the dots closer or further from the bottom */
-    left: 0;
-    right: 0;
-    text-align: center;
-  }
-  
-  .swiper-pagination-bullet {
-    background-color: $smokey;
-    opacity: 1;
-    z-index: 10;
-  }
-  
-  .swiper-pagination-bullet-active {
-    background-color: $primary;
-  }
-  
-  /* Swiper Navigation Arrows */
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: $smokey;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 44px;
-    height: 44px;
-    z-index: 10;
-    opacity: 1;
-    display: none;
-  }
-
-  @media (min-width: 600px) {
-    .swiper-button-next,
-    .swiper-button-prev {
-      display: block;
-    }
-  }
-  
-  .swiper-button-next {
-    right: 20px;
-  }
-  
-  .swiper-button-prev {
-    left: 20px;
-  }
-  
-  /* To change the size of arrows */
-  .swiper-button-next::after,
-  .swiper-button-prev::after {
-    font-size: 24px; /* You can change this size if needed */
-  }
-}
-
-.aboutus__section {
-  .text__container {
-    margin-bottom: 3rem;
-
-    h2 {
-      margin: 0;
-      text-align: center;
-      font-size: 1.8rem;
-      font-weight: 500;
-    }
-  
-    p {
-      text-align: center;
-      color: #999999;
-    }
-  }
-
-  .aboutus__section-container {
-    padding: 6rem 0;
-    margin-inline: 3rem;
-    
-    @media (min-width: 800px) {
-      width: 700px;
-      margin-inline: auto;
-    }
-
-    @media (min-width: 1000px) {
-      width: 900px;
-    }
-
-    .about__text {
-        p {
-          font-size: 1.1rem;
-          text-wrap: pretty;
-        }
-    }
-
-  }
 }

@@ -23,7 +23,7 @@ const swiper = new Swiper('.swiper-container', {
 document.addEventListener('DOMContentLoaded', function() {
   const links = document.querySelectorAll('.menu-link');
   links.forEach(link => {
-      link.addEventListener('click', function(event) {
+      link.addEventListener('click', function (event) {
           event.preventDefault();
           const targetId = this.getAttribute('href').substring(1);
           const targetElement = document.getElementById(targetId);

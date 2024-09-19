@@ -12,11 +12,11 @@
   <div class="socials__header">
     <div class="socials__header-container">
       <div class="links">
-        <a href="#">FAQ</a>
+        <!-- <a href="#">FAQ</a>
         <span>|</span>
         <a href="#">Helpdesk</a>
         <span>|</span>
-        <a href="#">Track Shipment</a>
+        <a href="#">Track Shipment</a> -->
       </div>
       <div class="socials">
         <div class="social">
@@ -35,7 +35,9 @@
   <header class="logo__header">
     <div class="logo__header-container">
       <div class="logo__container">
-        <img src="{{ asset('/img/logo.png') }}" alt="Logo">
+        <a href="/">
+          <img src="{{ asset('/img/logo.png') }}" alt="Logo">
+        </a>
       </div>
       <div class="points__container">
         <div class="point">
@@ -93,7 +95,9 @@
     <div class="footer__container">
       <div class="footer__element footer__logo">
         <div class="image__container">
-          <img src="{{ asset('/img/logo_white.png') }}" alt="Logo">
+          <a href="#hero" class="menu-link">
+            <img src="{{ asset('/img/logo.png') }}" alt="Logo">
+          </a>
         </div>
         <p>
           At [Your Company Name], we specialize in providing reliable and efficient transport and removal services. With a commitment to quality and sustainability, our experienced team ensures safe delivery of furniture, eco-friendly disposal of old items, and seamless moving solutions. Trust us to handle your needs with care and professionalism.
