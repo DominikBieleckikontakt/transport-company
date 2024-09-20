@@ -148,7 +148,7 @@
                     <p>Your Trusted Partner for Furniture Transport, Removals, and Pallet Shipping</p>
                 </div>
                 <div class="about__text">
-                    <p>At <strong>[Your Company Name]</strong>, we specialize in providing efficient and reliable furniture transport and moving services. Whether you need to move large items like <i>sofas</i>, <i>armchairs</i>, or <i>beds</i>, or you're looking for hassle-free disposal of old furniture, we've got you covered. Our team is experienced in handling everything from home relocations to the transport of palletized goods. We understand the importance of careful handling and timely delivery, and we are committed to making the process as smooth as possible for you. No job is too big or too small – whether it's a single item or a full house move, we are here to help.</p>
+                    <p>At <strong>[Your Company Name]</strong>, we specialize in providing efficient and reliable furniture transport and moving services, primarily across West Yorkshire. Whether you need to move large items like <i>sofas</i>, <i>armchairs</i>, or <i>beds</i>, or you're looking for hassle-free disposal of old furniture, we've got you covered. Our team is experienced in handling everything from home relocations to the transport of palletized goods. While we focus on West Yorkshire, we can also accommodate jobs from London when needed. We understand the importance of careful handling and timely delivery, and we are committed to making the process as smooth as possible for you. No job is too big or too small – whether it's a single item or a full house move, we are here to help.</p>
                 </div>
             </div>
         </section>
@@ -165,8 +165,8 @@
                 <form action="">
                     <div class="form__container">
                         <div class="input__container">
-                            <label for="name">Name</label>
-                            <input type="text" minlength="3" id="name" required placeholder="Enter your name">
+                            <label for="name">First Name</label>
+                            <input type="text" minlength="3" id="name" required placeholder="Enter your first name">
                         </div>
                         <div class="input__container">
                             <label for="lastname">Last name</label>

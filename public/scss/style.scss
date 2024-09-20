@@ -239,7 +239,7 @@ nav {
 
       &:hover {
         a {
-          color: black;
+          color: $primary-hover;
         }
       }
     }
@@ -424,6 +424,9 @@ nav {
       transition: background-color 0.5s ease;
       padding: 3rem;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(50px);
+      transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 
       .image__container {
         display: flex;
@@ -472,7 +475,12 @@ nav {
       &:hover::after {
         transform: scaleY(1);
       }
+    }
 
+    // CARD SLIDE IN EFFECT
+    .card.in-view {
+      opacity: 1;
+      transform: translateX(0);
     }
 
     @media (min-width: 768px) {
@@ -519,6 +527,9 @@ nav {
     .item {
         display: flex;
         gap: 1rem;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: transform 0.5s ease-out, opacity 0.8s ease-out;
 
         h3 {
           font-size: 1.3rem;
@@ -527,7 +538,18 @@ nav {
         p {
           color: #999999;
         }
-    }
+      }
+
+      
+      .item.in-view {
+        opacity: 1;
+        transform: translateY(0);
+
+        &:hover {
+          transform: translateY(-10px) ;
+          transition: transform 0.2s;
+        }
+      }
 
     .text {
         flex-grow: 1;
