@@ -93,55 +93,57 @@
     {{ $slot }}
   </main>
   <footer>
-    <div class="footer__container">
-      <div class="footer__element footer__logo">
-        <div class="image__container">
-          <a href="#hero" class="menu-link">
-            <img src="{{ asset('/img/logo.png') }}" alt="Logo">
-          </a>
-        </div>
-        <p>
-          {{ setting('site.about') }}
-        </p>
-      </div>
-      <div class="footer__element">
-        <h2>Navigation</h2>
-        <ul>
-          <li><a href="#hero" class="menu-link">HOME</a></li>
-          <li><a href="#services" class="menu-link">SERVICES</a></li>
-          <li><a href="#specialities" class="menu-link">OUR SPECIALITIES</a></li>
-          <li><a href="#about" class="menu-link">ABOUT US</a></li>
-          <li><a href="#contact" class="menu-link">CONTACT</a></li>
-        </ul>
-      </div>
-      <div class="footer__element">
-        <h2>Section</h2>
-        <ul>
-          <li><a href="#">THIS</a></li>
-          <li><a href="#">IS</a></li>
-          <li><a href="#">SOME</a></li>
-          <li><a href="#">LIST</a></li>
-        </ul>
-      </div>
-      <div class="footer__element footer__contact">
-        <h2>Contact us</h2>
-        <div>
-          <p>{{ setting('site.address') }}</p>
-        </div>
-        <div>
+    <div class="footer__container section__container">
+
+        <div class="footer__element footer__logo">
+          <div class="image__container">
+            <a href="#hero" class="menu-link">
+              <img src="{{ asset('/img/logo.png') }}" alt="Logo">
+            </a>
+          </div>
           <p>
-            <a href="tel:{{ setting('site.address') }}">{{ setting('site.phone') }}</a>
+            {{ setting('site.about') }}
           </p>
         </div>
-        <div>
-          <p>
-            <a href="mailto:{{ setting('site.email') }}">{{ setting('site.email') }}</a>
-          </p>
+        <div class="footer__element">
+          <h2>Navigation</h2>
+          <ul>
+            <li><a href="#hero" class="menu-link">HOME</a></li>
+            <li><a href="#services" class="menu-link">SERVICES</a></li>
+            <li><a href="#specialities" class="menu-link">OUR SPECIALITIES</a></li>
+            <li><a href="#about" class="menu-link">ABOUT US</a></li>
+            <li><a href="#contact" class="menu-link">CONTACT</a></li>
+          </ul>
         </div>
-      </div>
+        <div class="footer__element">
+          <h2>Section</h2>
+          <ul>
+            <li><a href="#">THIS</a></li>
+            <li><a href="#">IS</a></li>
+            <li><a href="#">SOME</a></li>
+            <li><a href="#">LIST</a></li>
+          </ul>
+        </div>
+        <div class="footer__element footer__contact">
+          <h2>Contact us</h2>
+          <div>
+            <p>{{ setting('site.address') }}</p>
+          </div>
+          <div>
+            <p>
+              <a href="tel:{{ setting('site.address') }}">{{ setting('site.phone') }}</a>
+            </p>
+          </div>
+          <div>
+            <p>
+              <a href="mailto:{{ setting('site.email') }}">{{ setting('site.email') }}</a>
+            </p>
+          </div>
+        </div>
+
     </div>
     <div class="footer__copyright">
-      Designed by: <a href="https://stronydlafirm.eu">StronyDlaFirm.eu</a>
+      Projekt i Realizacja: <a href="https://digitalowa.pl">Agencja Digitalowa.pl</a>
     </div>
     <div class="phone__call">
       <a href="tel:{{ setting('site.phone') }}">
