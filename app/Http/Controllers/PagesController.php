@@ -16,11 +16,4 @@ class PagesController extends Controller
         $slides = Slide::orderBy('id', 'asc')->get();
         return view('home', compact('services', 'specialitiesFirst', 'sepcialitiesSecond', 'slides'));
     }
-
-    public function contact (Request $request) {
-        $data = $request->validate([
-            'name' => 'required',
-            
-        ])
-    }
 }
