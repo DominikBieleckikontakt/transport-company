@@ -101,9 +101,9 @@
               <img src="{{ asset('/img/logo.png') }}" alt="Logo">
             </a>
           </div>
-          <p>
-            {{ setting('site.about') }}
-          </p>
+        <p>
+          {{ \Illuminate\Support\Str::limit(setting('site.about'), 100, ' ...') }}
+        </p>
         </div>
         <div class="footer__element">
           <h2>Navigation</h2>

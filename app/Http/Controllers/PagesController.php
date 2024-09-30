@@ -30,9 +30,9 @@ class PagesController extends Controller
 
         try {
               Mail::to('jakub@digitalowa.pl')->send(new ContactMail($data));
-              return redirect()->back()->with('success', 'Wiadomośc została wysłana');
+              return redirect()->back()->with('success', 'Message sent successfully! We will contact you soon.');
           } catch (\Exception $e) {
-              return redirect()->back()->with('error', 'Wiadomośc nie została wysłana. Spróbuj ponownie później.');
+              return redirect()->back()->with('error', 'Something went wrong! Please try again later.');
           }
         }
 }

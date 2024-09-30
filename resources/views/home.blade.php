@@ -112,27 +112,49 @@
                     </div>
                     <p>Contact Us for Prompt and Friendly Support</p>
                 </div>
-                <form method="POST" action="{{ route('contact') }}">
+                <form method="POST" action="{{ route('contact.send') }}#contact">
                     @csrf
+
+                    @if(session()->has('success'))
+                        <div class="contact__section-success">
+                            {{ session()->get('success') }}
+                        </div>
+                    @endif
+
                     <div class="form__container">
                         <div class="input__container">
                             <label for="first_name">First Name</label>
                             <input type="text" name="first_name" id="first_name" required placeholder="Enter your first name">
+                            @error('first_name')
+                                <p class="error">{{ $message }}</p>
+                            @enderror
                         </div>
                         <div class="input__container">
                             <label for="last_name">Last name</label>
                             <input type="text" name="last_name" minlength="3" id="last_name" required placeholder="Enter your last name">
+                            @error('last_name')
+                                <p class="error">{{ $message }}</p>
+                            @enderror
                         </div>
                         <div class="input__container">
                             <label for="email">Email</label>
                             <input type="email" name="email" id="email" required placeholder="Enter your email">
+                             @error('email')
+                                <p class="error">{{ $message }}</p>
+                            @enderror
                         </div>
                         <div class="input__container">
                             <label for="phone">Phone number</label>
                             <input type="number" name="phone" minlength="3" id="phone" required placeholder="Enter your phone number">
+                             @error('phone')
+                                <p class="error">{{ $message }}</p>
+                            @enderror
                         </div>
                         <div class="textarea__container">
                             <textarea name="message" minlength="5" rows="5" id="message" required placeholder="Enter your message"></textarea>
+                             @error('message')
+                                <p class="error">{{ $message }}</p>
+                            @enderror
                         </div>
                         <div class="btn__container">
                             <button type="submit">Send</button>
