@@ -16,7 +16,7 @@ use App\Http\Controllers\PagesController;
 
 Route::controller(PagesController::class)->group(function () {
     Route::get('/', 'home')->name('home');
-    Route::post('/kontakt', 'contact')->name('contact');
+    Route::post('/kontakt', 'sendContact')->name('contact.send');
 });
 
 

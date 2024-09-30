@@ -116,20 +116,20 @@
                     @csrf
                     <div class="form__container">
                         <div class="input__container">
-                            <label for="name">First Name</label>
-                            <input type="text" minlength="3" id="name" required placeholder="Enter your first name">
+                            <label for="first_name">First Name</label>
+                            <input type="text" name="first_name" id="first_name" required placeholder="Enter your first name">
                         </div>
                         <div class="input__container">
-                            <label for="lastname">Last name</label>
-                            <input type="text" minlength="3" id="lastname" required placeholder="Enter your lastname">
+                            <label for="last_name">Last name</label>
+                            <input type="text" name="last_name" minlength="3" id="last_name" required placeholder="Enter your last name">
                         </div>
                         <div class="input__container">
                             <label for="email">Email</label>
-                            <input type="email" id="email" required placeholder="Enter your email">
+                            <input type="email" name="email" id="email" required placeholder="Enter your email">
                         </div>
                         <div class="input__container">
                             <label for="phone">Phone number</label>
-                            <input type="number" minlength="3" id="phone" required placeholder="Enter your phone number">
+                            <input type="number" name="phone" minlength="3" id="phone" required placeholder="Enter your phone number">
                         </div>
                         <div class="textarea__container">
                             <textarea name="message" minlength="5" rows="5" id="message" required placeholder="Enter your message"></textarea>
