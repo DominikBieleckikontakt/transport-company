@@ -9,6 +9,7 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    base: '/build/',
     resolve: {
         alias: {
             '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap')
