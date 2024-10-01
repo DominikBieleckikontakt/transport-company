@@ -1,5 +1,7 @@
 import 'bootstrap';
 import '../../resources/js/bootstrap';
+import '../scss/style.scss';
+import '../../resources/css/app.css';
 
 
 // BANNER SWIPER

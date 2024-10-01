@@ -7,7 +7,7 @@
   <meta name="description" content="{{ setting('site.description') }}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
-  @vite(['resources/js/app.js', 'public/js/app.js', 'public/scss/style.scss'])
+  @vite(['resources/js/app.js', 'public/js/app.js'])
 </head>
 <body>
   <div class="socials__header">
