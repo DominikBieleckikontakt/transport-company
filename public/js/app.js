@@ -1,4 +1,6 @@
 import 'bootstrap';
+import '../../resources/js/bootstrap';
+
 
 // BANNER SWIPER
 const swiper = new Swiper('.swiper-container', {
