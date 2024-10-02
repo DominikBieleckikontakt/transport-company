@@ -9,6 +9,8 @@ const swiper = new Swiper('.swiper-container', {
   loop: true,
   lazy: true,
   preloadImages: false,
+  slidesPerView: 1,
+  spaceBetween: 0,  
   autoplay: {
     delay: 5000,
     disableOnInteraction: false,

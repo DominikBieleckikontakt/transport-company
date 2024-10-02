@@ -13,11 +13,6 @@
   <div class="socials__header">
     <div class="socials__header-container">
       <div class="links">
-        <!-- <a href="#">FAQ</a>
-        <span>|</span>
-        <a href="#">Helpdesk</a>
-        <span>|</span>
-        <a href="#">Track Shipment</a> -->
       </div>
       <div class="socials">
         <div class="social">
@@ -75,6 +70,9 @@
   </header>
   <nav class="navbar navbar-expand-md">
     <div class="container-fluid">
+      <a href="/" class="navbar-brand">
+        <img src="{{ asset('/storage/'.setting('site.logo')) }}" alt="Logo">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -93,8 +91,7 @@
     {{ $slot }}
   </main>
   <footer>
-    <div class="footer__container section__container">
-
+    <div class="footer__container">
         <div class="footer__element footer__logo">
           <div class="image__container">
             <a href="#hero" class="menu-link">
