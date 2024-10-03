@@ -231,47 +231,55 @@ section:nth-child(even) {
   }
 }
 
-.navbar {
-  position: sticky;
-  top: 0;
-  background-color: $accent;
-  z-index: 999;
-}
-
 nav {
   background-color: $accent;
 
-  .navbar-brand {
-    img {
-      display: none;
-      width: 50px;
+  .navbar-collapse {
+    position: absolute; /* Position it absolutely */
+    top: 100%; /* Position it right below the navbar */
+    left: 0;
+    right: 0;
+    background-color: $accent;
+    z-index: 100; /* Make sure it sits above other content */
 
-      @media (max-width: 768px) {
-        display: block;
+    @media (min-width: 768px) {
+      top: 0%;
+      padding: 1rem;
+    }
+
+    ul {
+
+      list-style-type: none;
+    
+      li {
+        margin: 1rem 0rem;
+        margin-left: 1rem;
+        font-weight: 400;
+        font-size: 1.2rem;
+        
+  
+        a {
+          transition-duration: $transition-duration;
+          text-decoration: none;
+          color: rgb(79, 79, 79);
+        }
+  
+        &:hover {
+          a {
+            color: $primary-hover;
+          }
+        }
       }
     }
   }
 
-  ul {
-    margin-top: 1rem;
-    list-style-type: none;
-    
-    li {
-      margin: 1rem 0rem;
-      font-weight: 400;
-      font-size: 1.2rem;
-      
+  .navbar-brand {
+    img {
+      display: none;
+      width: 70px;
 
-      a {
-        transition-duration: $transition-duration;
-        text-decoration: none;
-        color: rgb(79, 79, 79);
-      }
-
-      &:hover {
-        a {
-          color: $primary-hover;
-        }
+      @media (max-width: 768px) {
+        display: block;
       }
     }
   }

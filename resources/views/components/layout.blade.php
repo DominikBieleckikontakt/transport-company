@@ -68,7 +68,7 @@
       </div>
     </div>
   </header>
-  <nav class="navbar navbar-expand-md">
+  <nav class="navbar navbar-expand-md sticky-top">
     <div class="container-fluid">
       <a href="/" class="navbar-brand">
         <img src="{{ asset('/storage/'.setting('site.logo')) }}" alt="Logo">
@@ -77,7 +77,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarToggler">
-        <ul>
+        <ul class="navbar-nav ms-auto">
           <li><a href="#hero" class="menu-link">HOME</a></li>
           <li><a href="#services" class="menu-link">SERVICES</a></li>
           <li><a href="#specialities" class="menu-link">OUR SPECIALITIES</a></li>
@@ -113,12 +113,12 @@
           </ul>
         </div>
         <div class="footer__element">
-          <h2>Section</h2>
+          <h2>Specialities</h2>
           <ul>
-            <li><a href="#">THIS</a></li>
-            <li><a href="#">IS</a></li>
-            <li><a href="#">SOME</a></li>
-            <li><a href="#">LIST</a></li>
+            <li><a href="#specialities">Fast Response</a></li>
+            <li><a href="#specialities">Care in Furniture Transport</a></li>
+            <li><a href="#specialities">Affordable Pricing</a></li>
+            <li><a href="#specialities">Reliable Moving Services</a></li>
           </ul>
         </div>
         <div class="footer__element footer__contact">
