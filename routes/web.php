@@ -23,3 +23,22 @@ Route::controller(PagesController::class)->group(function () {
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::get('/clearcache', function () {
+    // Utworzenie symbolic linku dla storage
+    Artisan::call('storage:link');
+
+    // Czyszczenie cache aplikacji
+    Artisan::call('cache:clear');
+
+    // Czyszczenie cache konfiguracji
+    Artisan::call('config:clear');
+
+    // Czyszczenie cache widoków
+    Artisan::call('view:clear');
+
+    // Czyszczenie cache routingu
+    Artisan::call('route:clear');
+
+    return 'Cache został wyczyszczony, a link do storage utworzony!';
+});
