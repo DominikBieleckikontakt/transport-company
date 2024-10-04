@@ -46,20 +46,17 @@
     <div class="container">
         <h1>Nowa wiadomość z formularza kontaktowego</h1>
         
-        <p class="data-label">Imię:</p>
-        <p class="data-value">{{ $data['first_name'] }}</p>
+        <p class="data-label">Usługa:</p>
+        <p class="data-value">{{ $data['service'] }}</p>
 
-        <p class="data-label">Nazwisko:</p>
-        <p class="data-value">{{ $data['last_name'] }}</p>
+        <p class="data-label">Skąd:</p>
+        <p class="data-value">{{ $data['from'] }}</p>
 
-        <p class="data-label">E-mail:</p>
-        <p class="data-value">{{ $data['email'] }}</p>
+        <p class="data-label">Dokąd:</p>
+        <p class="data-value">{{ $data['to'] }}</p>
 
         <p class="data-label">Telefon:</p>
         <p class="data-value">{{ $data['phone'] }}</p>
-
-        <p class="data-label">Wiadomość:</p>
-        <p class="data-value">{{ $data['message'] }}</p>
 
         <div class="footer">
             <p>Ta wiadomość została wysłana z formularza kontaktowego na Twojej stronie.</p>

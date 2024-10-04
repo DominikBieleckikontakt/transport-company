@@ -6,6 +6,7 @@ use App\Models\Slide;
 use App\Models\Service;
 use App\Mail\ContactMail;
 use App\Models\Speciality;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -16,16 +17,16 @@ class PagesController extends Controller
         $specialitiesFirst = Speciality::orderBy('id', 'asc')->limit(2)->get();
         $sepcialitiesSecond = Speciality::orderBy('id', 'asc')->offset(2)->limit(2)->get();
         $slides = Slide::orderBy('id', 'asc')->get();
-        return view('home', compact('services', 'specialitiesFirst', 'sepcialitiesSecond', 'slides'));
+        $testimonials = Testimonial::get();
+        return view('home', compact('services', 'specialitiesFirst', 'sepcialitiesSecond', 'slides', 'testimonials'));
     }
 
     public function sendContact(Request $request) {
         $data = $request->validate([
-            'first_name' => 'required',
-            'last_name' => 'required',
-            'email' => 'required|email',
+            'service' => 'required',
+            'from' => 'required',
+            'to' => 'required',
             'phone' => 'required',
-            'message' => 'required'
         ]);
 
         try {

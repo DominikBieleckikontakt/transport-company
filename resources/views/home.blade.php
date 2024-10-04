@@ -30,8 +30,13 @@
                     </div>
                     <p>Tell us what you need</p>
                 </div>
-                <form action="" method="POST">
+                <form action="{{ route('contact.send') }}#contact" method="POST">
                     @csrf
+                    @if(session()->has('success'))
+                        <div class="contact__section-success">
+                            {{ session()->get('success') }}
+                        </div>
+                    @endif
                     <div class="form-group position-relative">
                         <!-- <label for="service">Service:</label> -->
                         <input type="text" class="form-control input-with-icon" id="service" name="service" placeholder="What service do you need...">
@@ -55,7 +60,7 @@
                         <img src="{{ asset('/img/phone_input.png') }}" alt="icon" class="input-icon">
                     </div>
                     <div class="btn__container">
-                        <button type="submit">Send</button>
+                        <button type="submit">Receive quotes in minutes</button>
                     </div>
                 </form>
 
@@ -218,92 +223,21 @@
     
               <div class="swiper-container2 testimonial-swiper">
                 <div class="swiper-wrapper">
-          
+                  @foreach($testimonials as $testimonial)
                   <div class="swiper-slide">
                     <div class="testimonial-card p-4 shadow">
                       <div class="testimonial-content mb-4">
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel venenatis erat, vel placerat justo."</p>
+                        <p>{{ $testimonial->text }}</p>
                       </div>
                       <div class="testimonial-author d-flex align-items-center">
                         <div class="ml-3">
-                          <h5 class="mb-0">Client Name 1</h5>
-                          <p class="text-muted mb-0">Company Name</p>
+                          <h5 class="mb-0">{{ $testimonial->name }}</h5>
+                          <p class="text-muted mb-0">{{ $testimonial->company }}</p>
                         </div>
                       </div>
                     </div>
                   </div>
-          
-
-                  <div class="swiper-slide">
-                    <div class="testimonial-card p-4 shadow">
-                      <div class="testimonial-content mb-4">
-                        <p>"Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin varius massa."</p>
-                      </div>
-                      <div class="testimonial-author d-flex align-items-center">
-                        <div class="ml-3">
-                          <h5 class="mb-0">Client Name 2</h5>
-                          <p class="text-muted mb-0">Company Name</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-          
-           
-                  <div class="swiper-slide">
-                    <div class="testimonial-card p-4 shadow">
-                      <div class="testimonial-content mb-4">
-                        <p>"Aliquam tincidunt mauris eu risus. Nulla eu pretium massa. Donec vehicula rhoncus euismod."</p>
-                      </div>
-                      <div class="testimonial-author d-flex align-items-center">
-                        <div class="ml-3">
-                          <h5 class="mb-0">Client Name 3</h5>
-                          <p class="text-muted mb-0">Company Name</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="testimonial-card p-4 shadow">
-                      <div class="testimonial-content mb-4">
-                        <p>"Aliquam tincidunt mauris eu risus. Nulla eu pretium massa. Donec vehicula rhoncus euismod."</p>
-                      </div>
-                      <div class="testimonial-author d-flex align-items-center">
-                        <div class="ml-3">
-                          <h5 class="mb-0">Client Name 4</h5>
-                          <p class="text-muted mb-0">Company Name</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="testimonial-card p-4 shadow">
-                      <div class="testimonial-content mb-4">
-                        <p>"Aliquam tincidunt mauris eu risus. Nulla eu pretium massa. Donec vehicula rhoncus euismod."</p>
-                      </div>
-                      <div class="testimonial-author d-flex align-items-center">
-                        <div class="ml-3">
-                          <h5 class="mb-0">Client Name 5</h5>
-                          <p class="text-muted mb-0">Company Name</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="swiper-slide">
-                    <div class="testimonial-card p-4 shadow">
-                      <div class="testimonial-content mb-4">
-                        <p>"Aliquam tincidunt mauris eu risus. Nulla eu pretium massa. Donec vehicula rhoncus euismod."</p>
-                      </div>
-                      <div class="testimonial-author d-flex align-items-center">
-                        <div class="ml-3">
-                          <h5 class="mb-0">Client Name 6</h5>
-                          <p class="text-muted mb-0">Company Name</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>    
+                  @endforeach
                 </div>
               </div>
             </div>
