@@ -20,6 +20,47 @@
                 <div class="swiper-button-prev"></div>
               </div>
         </section>
+        <section class="contact__section" id="contact">
+            <div class="contact__section-container">
+                <div class="text__container">
+                    <h2>WHAT DO YOU NEED?</h2>
+                    <div class="line">
+                        <div class="blue"></div>
+                        <div class="gray"></div>
+                    </div>
+                    <p>Tell us what you need</p>
+                </div>
+                <form action="" method="POST">
+                    @csrf
+                    <div class="form-group position-relative">
+                        <!-- <label for="service">Service:</label> -->
+                        <input type="text" class="form-control input-with-icon" id="service" name="service" placeholder="What service do you need...">
+                        <img src="{{ asset('/img/furniture_input.png') }}" alt="icon" class="input-icon">
+                    </div>
+                    <div class="inputs-container">
+                        <div class="form-group position-relative location">
+                            <!-- <label for="from">From:</label> -->
+                            <input type="text" class="form-control input-with-icon" id="from" name="from" placeholder="Collection Location...">
+                            <img src="{{ asset('/img/pin.png') }}" alt="icon" class="input-icon">
+                        </div>
+                        <div class="form-group position-relative location">
+                            <!-- <label for="to">To:</label> -->
+                            <input type="text" class="form-control input-with-icon" id="to" name="to" placeholder="Delivery Location...">
+                            <img src="{{ asset('/img/pin.png') }}" alt="icon" class="input-icon">
+                        </div>
+                    </div>
+                    <div class="form-group position-relative phone">
+                        <!-- <label for="service">Phone number:</label> -->
+                        <input type="text" class="form-control input-with-icon" id="phone" name="phone" placeholder="Your phone number...">
+                        <img src="{{ asset('/img/phone_input.png') }}" alt="icon" class="input-icon">
+                    </div>
+                    <div class="btn__container">
+                        <button type="submit">Send</button>
+                    </div>
+                </form>
+
+            </div>
+        </section>
         <section class="whyus__section" id="services">
             <div class="section__container">
                 <div class="text__container">
@@ -102,7 +143,7 @@
                 </div>
             </div>
         </section>
-        <section class="contact__section" id="contact">
+        <!-- <section class="contact__section" id="contact">
             <div class="contact__section-container">
                 <div class="text__container">
                     <h2>CONTACT US</h2>
@@ -162,6 +203,110 @@
                     </div>
                 </form>
             </div>
-        </section>
+        </section> -->
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <div class="text__container">
+                    <h2>WHAT OUR CLIENTS SAY</h2>
+                    <div class="line">
+                        <div class="blue"></div>
+                        <div class="gray"></div>
+                    </div>
+                    <p>Read some opinions about us and our services</p>
+                </div>
+          
+    
+              <div class="swiper-container2 testimonial-swiper">
+                <div class="swiper-wrapper">
+          
+                  <div class="swiper-slide">
+                    <div class="testimonial-card p-4 shadow">
+                      <div class="testimonial-content mb-4">
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel venenatis erat, vel placerat justo."</p>
+                      </div>
+                      <div class="testimonial-author d-flex align-items-center">
+                        <div class="ml-3">
+                          <h5 class="mb-0">Client Name 1</h5>
+                          <p class="text-muted mb-0">Company Name</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          
+
+                  <div class="swiper-slide">
+                    <div class="testimonial-card p-4 shadow">
+                      <div class="testimonial-content mb-4">
+                        <p>"Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin varius massa."</p>
+                      </div>
+                      <div class="testimonial-author d-flex align-items-center">
+                        <div class="ml-3">
+                          <h5 class="mb-0">Client Name 2</h5>
+                          <p class="text-muted mb-0">Company Name</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          
+           
+                  <div class="swiper-slide">
+                    <div class="testimonial-card p-4 shadow">
+                      <div class="testimonial-content mb-4">
+                        <p>"Aliquam tincidunt mauris eu risus. Nulla eu pretium massa. Donec vehicula rhoncus euismod."</p>
+                      </div>
+                      <div class="testimonial-author d-flex align-items-center">
+                        <div class="ml-3">
+                          <h5 class="mb-0">Client Name 3</h5>
+                          <p class="text-muted mb-0">Company Name</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="testimonial-card p-4 shadow">
+                      <div class="testimonial-content mb-4">
+                        <p>"Aliquam tincidunt mauris eu risus. Nulla eu pretium massa. Donec vehicula rhoncus euismod."</p>
+                      </div>
+                      <div class="testimonial-author d-flex align-items-center">
+                        <div class="ml-3">
+                          <h5 class="mb-0">Client Name 4</h5>
+                          <p class="text-muted mb-0">Company Name</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="testimonial-card p-4 shadow">
+                      <div class="testimonial-content mb-4">
+                        <p>"Aliquam tincidunt mauris eu risus. Nulla eu pretium massa. Donec vehicula rhoncus euismod."</p>
+                      </div>
+                      <div class="testimonial-author d-flex align-items-center">
+                        <div class="ml-3">
+                          <h5 class="mb-0">Client Name 5</h5>
+                          <p class="text-muted mb-0">Company Name</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="testimonial-card p-4 shadow">
+                      <div class="testimonial-content mb-4">
+                        <p>"Aliquam tincidunt mauris eu risus. Nulla eu pretium massa. Donec vehicula rhoncus euismod."</p>
+                      </div>
+                      <div class="testimonial-author d-flex align-items-center">
+                        <div class="ml-3">
+                          <h5 class="mb-0">Client Name 6</h5>
+                          <p class="text-muted mb-0">Company Name</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>    
+                </div>
+              </div>
+            </div>
+          </section>
     </div>
 </x-layout>

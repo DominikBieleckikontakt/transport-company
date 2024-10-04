@@ -25,6 +25,33 @@ const swiper = new Swiper('.swiper-container', {
   },
 });
 
+// TESTIMONIALS SWIPER
+var swiper2 = new Swiper('.testimonial-swiper', {
+  loop: true,
+  slidesPerView: 2,
+  spaceBetween: 30,
+  centeredSlides: true,
+  initialSlide: 1,
+  watchOverflow: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  autoplay: {
+    delay: 5000, // Autoplay every 5 seconds
+    disableOnInteraction: false,
+  },
+  on: {
+    init: function() {
+      this.update(); // Force update after initialization
+    },
+  },
+});
+
 // NAVIGATION
 document.addEventListener('DOMContentLoaded', function() {
   const links = document.querySelectorAll('.menu-link');
