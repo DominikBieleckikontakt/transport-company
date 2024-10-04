@@ -209,8 +209,8 @@
                 </form>
             </div>
         </section> -->
-        <section id="testimonials" class="testimonials-section">
-            <div class="container">
+        <!-- <section id="testimonials" class="testimonials-section">
+            <div class="section__container">
                 <div class="text__container">
                     <h2>WHAT OUR CLIENTS SAY</h2>
                     <div class="line">
@@ -241,6 +241,35 @@
                 </div>
               </div>
             </div>
-          </section>
+          </section> -->
+          <div class="testimonial-container">
+            <div class="section__container">
+                <div class="text__container">
+                    <h2>WHAT OUR CLIENTS SAY</h2>
+                    <div class="line">
+                        <div class="blue"></div>
+                        <div class="gray"></div>
+                    </div>
+                    <p>Read some opinions about us and our services</p>
+                </div>
+                <div class="swiper testimonial-swiper">
+                    <div class="swiper-wrapper">
+                        @foreach($testimonials as $testimonial)
+                        <div class="swiper-slide">
+                            <div class="testimonial-card p-4 shadow-sm">
+                                <div class="testimonial-content mb-4">
+                                    <p>{{ $testimonial->text }}</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <h5 class="mb-0">{{ $testimonial->name }}</h5>
+                                    <p class="text-muted mb-0">{{ $testimonial->company }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </x-layout>

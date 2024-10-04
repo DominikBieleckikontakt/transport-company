@@ -28,7 +28,7 @@ const swiper = new Swiper('.swiper-container', {
 // TESTIMONIALS SWIPER
 var swiper2 = new Swiper('.testimonial-swiper', {
   loop: true,
-  slidesPerView: 2,
+  slidesPerView: 1,
   spaceBetween: 30,
   centeredSlides: true,
   initialSlide: 1,
@@ -42,14 +42,19 @@ var swiper2 = new Swiper('.testimonial-swiper', {
     prevEl: '.swiper-button-prev',
   },
   autoplay: {
-    delay: 5000, // Autoplay every 5 seconds
+    delay: 5000,
     disableOnInteraction: false,
   },
   on: {
     init: function() {
-      this.update(); // Force update after initialization
+      this.update(); 
     },
   },
+  breakpoints: {
+    900: {
+        slidesPerView: 2,
+    },
+},
 });
 
 // NAVIGATION
