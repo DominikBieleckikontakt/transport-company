@@ -88,6 +88,44 @@
                     @endforeach
             </div>
         </section>
+        <section class="royalsofa__section">
+            <div class="aboutus__section-container">
+                <div class="text__container">
+                    <h2>EXPLORE OUR SOFA SHOP</h2>
+                    <div class="line">
+                        <div class="blue"></div>
+                        <div class="gray"></div>
+                    </div>
+                    <p>Stylish, Comfortable Sofas with Reliable Delivery</p>
+                </div>
+                <div class="royalsofa__banner__container">
+                    <a href="https://royalsofa.co.uk/shop" target="_blank">
+                        <img src="{{ asset('/img/order-sofa-banner.png') }}" alt="Royalsofa Banner">
+                    </a>
+                </div>
+                <div class="about__text">
+                    <p>At <b>RoyalSofa</b>, we offer a handpicked selection of premium sofas, combining <i>comfort</i>, <i>style</i>, and <i>durability</i>. As furniture transport specialists, we know how important it is to deliver your sofa with care, ensuring it arrives safely to your home.</p>
+                </div>
+                <div class="call__action__container">
+                    <a href="https://royalsofa.co.uk" target="_blank" class="call__action">Shop Sofas Now</a>
+                </div>
+            </div>
+        </section>
+        <section class="aboutus__section" id="about">
+            <div class="aboutus__section-container">
+                <div class="text__container">
+                    <h2>ABOUT US</h2>
+                    <div class="line">
+                        <div class="blue"></div>
+                        <div class="gray"></div>
+                    </div>
+                    <p>Your Trusted Partner for Furniture Transport, Removals, and Pallet Shipping</p>
+                </div>
+                <div class="about__text">
+                    <p>{{ setting('site.about') }}</p>
+                </div>
+            </div>
+        </section>
         <section class="bestat__section" id="specialities">
             <div class="section__container">
                 <div class="text__container">
@@ -130,21 +168,6 @@
                         </div>
                         @endforeach
                     </div>
-                </div>
-            </div>
-        </section>
-        <section class="aboutus__section" id="about">
-            <div class="aboutus__section-container">
-                <div class="text__container">
-                    <h2>ABOUT US</h2>
-                    <div class="line">
-                        <div class="blue"></div>
-                        <div class="gray"></div>
-                    </div>
-                    <p>Your Trusted Partner for Furniture Transport, Removals, and Pallet Shipping</p>
-                </div>
-                <div class="about__text">
-                    <p>{{ setting('site.about') }}</p>
                 </div>
             </div>
         </section>

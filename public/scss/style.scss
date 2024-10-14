@@ -634,8 +634,97 @@ nav {
 
     @media (min-width: 1000px) {
       grid-template-columns: repeat(3, 1fr);
+
+      .card:nth-child(4) {
+        grid-column: 2;
+      }
     }
 
+  }
+}
+
+.royalsofa__section {
+  .text__container {
+    margin-bottom: 3rem;
+
+    h2 {
+      margin: 0;
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+  
+    p {
+      text-align: center;
+      color: #999999;
+      font-size: .9rem;
+    }
+
+    @media (min-width: 768px) {
+      h2 {
+        margin: 0;
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 500;
+      }
+    
+      p {
+        text-align: center;
+        color: #999999;
+      }
+    }
+  }
+
+  .aboutus__section-container {
+    padding: 6rem 0;
+    margin-inline: 3rem;
+    
+    @media (min-width: 800px) {
+      width: 700px;
+      margin-inline: auto;
+    }
+
+    @media (min-width: 1000px) {
+      width: 900px;
+    }
+
+    .call__action__container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .royalsofa__banner__container a img {
+      max-width: 100%;
+      border-radius: 16px;
+      margin-bottom: 2rem;
+    }
+
+    .call__action {
+      margin-inline: auto;
+      background-color: $primary;
+      color: white;
+      padding: 16px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition-duration: $transition-duration;
+
+      &:hover {
+        background-color: $primary-hover;
+      }
+    }
+
+    .about__text {
+      margin-bottom: 3rem;
+      p {
+        font-size: 1rem;
+        text-wrap: pretty;
+
+        @media (min-width: 768px) {
+          font-size: 1.1rem;
+        }
+      }
+    }
   }
 }
 
@@ -833,7 +922,7 @@ nav {
 
 .testimonial-container {
   margin: 0 auto; 
-
+  background-color: $smokey;
 
   
   .text__container {
@@ -884,7 +973,7 @@ nav {
   .swiper-slide {
     display: flex;
     justify-content: center;
-    background-color: $smokey;
+    background-color: white;
     border-radius: 12px;
     width: 100%;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
