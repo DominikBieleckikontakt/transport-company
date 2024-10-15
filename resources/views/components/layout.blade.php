@@ -10,7 +10,7 @@
   @vite(['public/js/app.js'])
 </head>
 <body>
-  <div class="socials__header">
+  <!-- <div class="socials__header">
     <div class="socials__header-container">
       <div class="links">
       </div>
@@ -27,7 +27,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <header class="logo__header">
     <div class="logo__header-container">
       <div class="logo__container">
@@ -140,9 +140,9 @@
 
     </div>
     <div class="footer__copyright">
-      Projekt i Realizacja: <a href="https://digitalowa.pl">Agencja Digitalowa.pl</a>
+      Project and Realization: <a href="https://data-assistance.co.uk/en">data-assistance.co.uk </a>
     </div>
-    <div class="phone__call">
+    <div class="phone__call pulse">
       <a href="tel:{{ setting('site.phone') }}">
         <img src="{{ asset('img/phone_call_icon.png') }}" alt="phone">
       </a>
